@@ -31,7 +31,39 @@ window.onscroll = () => {
     });
 
 }
+let menu = document.querySelector('#setting');
+let navbar = document.querySelector('.tabs-setting');
 
+menu.onclick = () => {
+    menu.classList.toggle('close-outline');
+    navbar.classList.toggle('#setting');
+}
+
+let section = document.querySelectorAll('section');
+let tabsetting = document.querySelectorAll('header .tabs-setting .box');
+
+window.onscroll = () => {
+
+    menu.classList.remove('close-outline');
+    navbar.classList.remove('setting');
+
+    section.forEach(sec => {
+
+        let top = window.scrollY;
+        let height = sec.offsetHeight;
+        let offset = sec.offsetTop - 150;
+        let id = sec.getAttribute('id');
+
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('setting');
+                document.querySelector('header .tabs-setting  a[href*=' + id + ']').classList.add('setting');
+            });
+        };
+
+    });
+
+}
 var swiper = new Swiper(".homes", {
     spaceBetween: 30,
     centeredSlides: true,

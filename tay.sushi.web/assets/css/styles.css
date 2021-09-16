@@ -98,6 +98,31 @@
                 color: #2f3640;
             }
             
+            header .icons .tabs-setting {
+                background: #eee;
+                border-radius: .3rem;
+                padding: 0 .4rem;
+            }
+            
+            header .icons .tabs-setting .box {
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: .2rem 0;
+            }
+            
+            header .icons .tabs-setting .box ion-icon {
+                width: 1rem;
+                height: 1rem;
+            }
+            
+            header .icons .tabs-setting .box ion-icon:hover {
+                color: white;
+                background: #e84118;
+                transform: rotate(0deg);
+            }
+            
             header .icons #menu-bars {
                 clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             }
