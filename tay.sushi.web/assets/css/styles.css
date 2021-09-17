@@ -99,6 +99,7 @@
             }
             
             header .icons .tabs-setting {
+                position: absolute;
                 background: #eee;
                 border-radius: .3rem;
                 padding: 0 .4rem;
