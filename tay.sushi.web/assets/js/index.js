@@ -2,7 +2,7 @@
    let navbar = document.querySelector('.tabs');
 
    menu.onclick = () => {
-       menu.classList.toggle('close-outline');
+       menu.classList.toggle('fa-eye');
        navbar.classList.toggle('home-tabs');
    }
 
@@ -11,7 +11,7 @@
 
    window.onscroll = () => {
 
-       menu.classList.remove('close-outline');
+       menu.classList.remove('fa-eye');
        navbar.classList.remove('home-tabs');
 
        section.forEach(sec => {
@@ -29,21 +29,12 @@
            };
 
        });
-
    }
-   let menu = document.querySelector('#setting');
-   let navbar = document.querySelector('.tabs-setting');
-
-   menu.onclick = () => {
-       menu.classList.toggle('close-outline');
-       navbar.classList.toggle('#setting');
-   }
-
    var swiper = new Swiper(".homes", {
        spaceBetween: 30,
        centeredSlides: true,
        autoplay: {
-           delay: 2000,
+           delay: 7500,
            disableOnInteraction: false,
        },
        pagination: {
@@ -52,6 +43,7 @@
        },
        loop: true,
    });
+
    var swiper = new Swiper(".review-swiper", {
        spaceBetween: 20,
        centeredSlides: true,
@@ -81,7 +73,7 @@
    }
 
    function fadeOut() {
-       setInterval(loader, 1000);
+       setInterval(loader, 3000);
    }
 
    window.onload = fadeOut;
