@@ -7,7 +7,7 @@ body {
 .wire {
     position: absolute;
     width: .2rem;
-    left: 30rem;
+    left: 36rem;
     color: black;
     height: 10rem;
     background: rgb(0, 0, 0);
@@ -19,7 +19,7 @@ body {
     height: 5rem;
     background: rgb(119, 118, 118);
     border-radius: 2.5rem;
-    left: 27.6rem;
+    left: 33.6rem;
     top: 9rem;
 }
 
@@ -30,7 +30,7 @@ body {
     height: 5rem;
     background: rgb(252, 252, 252);
     border-radius: 2.5rem;
-    left: 27.6rem;
+    left: 33.6rem;
     top: 9rem;
     box-shadow: 0px 0px 10px 20px #fff;
     filter: blur(20px);
