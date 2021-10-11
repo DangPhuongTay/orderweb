@@ -559,7 +559,8 @@ body {
     width: 100%;
 }
 
-.Customers .list-box .box-left img {
+.Customers .list-box .box-left .img {
+    position: relative;
     height: 400px;
 }
 
@@ -1670,9 +1671,12 @@ body {
 }
 
 @media (max-width:500px) {
+    .contact {
+        padding: 0;
+    }
     .main {
         width: 100%;
-        left: 0;
+        margin-right: 0;
     }
     .toggle {
         transition: .5s;
@@ -1680,6 +1684,7 @@ body {
     }
     .main.active {
         left: 100%;
+        padding: 0 20px;
     }
     .container {
         left: -230px;
