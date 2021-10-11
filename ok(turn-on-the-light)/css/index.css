@@ -68,7 +68,7 @@ body.on {
     background: rgb(37, 37, 37);
 }
 
-body.on .light {
+body.on .light {    
     opacity: 1;
 }
 
