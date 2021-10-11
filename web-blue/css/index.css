@@ -554,13 +554,13 @@ body {
 }
 
 .Customers .list-box .box-left img {
-    height: 400px;
+    height: 100%;
     object-fit: cover;
     width: 100%;
 }
 
-.Customers .list-box .box-left .img {
-    position: relative;
+.Customers .list-box .box-left img {
+    height: 400px;
 }
 
 .Customers .list-box .box-left img:hover {
