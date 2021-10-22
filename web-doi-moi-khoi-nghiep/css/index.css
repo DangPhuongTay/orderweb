@@ -132,6 +132,9 @@ main.active {
   width: calc(100% - 50px);
   left: 50px;
 }
+body.active .btn {
+  transform: rotate(90deg);
+}
 body.active .main-play {
   width: calc(100% - 50px);
   left: 50px;
