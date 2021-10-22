@@ -186,7 +186,7 @@ main {
   width: calc(100% - 200px);
   top: 60px;
   padding: 10px;
-  background: #f7f5f5;
+  background: #fcfcfc;
   transition: 0.3s;
 }
 main .top-container {
@@ -270,7 +270,7 @@ main .bottom-container .list-video .video .content .top img {
   width: calc(100% - 200px);
   top: 60px;
   padding: 10px;
-  background: #f7f5f5;
+  background: #fcfcfc;
   transition: 0.3s;
 }
 .main-play .container-play {
