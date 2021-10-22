@@ -1,0 +1,563 @@
+* {
+  margin: 0 0;
+  padding: 0 0;
+  box-sizing: border-box;
+}
+:root {
+  --red: #ea2027;
+  --black1: #acacac;
+
+  --black2: #747474;
+  --black3: #252525;
+}
+html {
+  overflow-x: hidden;
+  font-family: "Nunito", sans-serif;
+}
+body {
+  width: 100%;
+  position: relative;
+}
+
+header {
+  padding: 0px 20px;
+  position: fixed;
+  height: 55px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  box-shadow: 0 3px 5px rgb(207, 207, 207);
+  justify-content: space-between;
+  z-index: 1001;
+  background: white;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+}
+header .logo span {
+  display: flex;
+  align-items: center;
+}
+header .logo a {
+  text-decoration: none;
+  color: #252525;
+  display: flex;
+  align-items: center;
+}
+header .logo .btn {
+  background: white;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  color: var(--black1);
+  display: flex;
+  align-items: center;
+}
+header .logo .lg {
+  font-size: 25px;
+  color: red;
+  margin-left: 10px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+}
+header .logo span {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+header .setting {
+  display: flex;
+  align-items: center;
+}
+header .setting ion-icon:nth-child(1) {
+  color: var(--red);
+}
+header .setting ion-icon {
+  margin: 0 5px;
+  font-size: 20px;
+  color: var(--black2);
+}
+header .setting img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+header .search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+header .search .input input {
+  width: 300px;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 13px;
+  border: 1px solid var(--black1);
+  outline: none;
+}
+header .search .icon-search {
+  position: absolute;
+  top: 4px;
+  right: 30px;
+  color: var(--black1);
+}
+header .search .vo {
+  color: var(--black2);
+  font-size: 20px;
+  margin-left: 5px;
+}
+nav {
+  position: fixed;
+  top: 40px;
+  background: white;
+  padding: 20px;
+  width: 200px;
+
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid #cccccc;
+  transition: 0.3s;
+}
+nav.active {
+  width: 50px;
+}
+nav.active .list-like li:nth-child(1) {
+  visibility: hidden;
+}
+main.active {
+  width: calc(100% - 50px);
+  left: 50px;
+}
+body.active .main-play {
+  width: calc(100% - 50px);
+  left: 50px;
+}
+nav .list-tab {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--black1);
+}
+nav .list-tab a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+  margin-right: 3px;
+}
+nav .list-tab a li {
+  list-style: none;
+  margin: 10px 0;
+  color: var(--black2);
+}
+nav .list-tab a li ion-icon {
+  margin-right: 13px;
+  font-size: 16px;
+}
+nav .list-like {
+  padding: 10px 0;
+}
+nav .list-like li:nth-child(1) {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 600;
+}
+nav .list-like li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 5px 0;
+}
+nav .list-like li img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  margin-left: -5px;
+}
+main {
+  position: absolute;
+  left: 200px;
+  width: calc(100% - 200px);
+  top: 60px;
+  padding: 10px;
+  background: #f7f5f5;
+  transition: 0.3s;
+}
+main .top-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+main .top-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+main .top-container .contaier {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50%;
+  color: white;
+}
+main .top-container .contaier span {
+  font-size: 25px;
+}
+main .top-container .contaier p {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+main .top-container .contaier button {
+  font-size: 15px;
+  color: white;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+main .bottom-container {
+  padding-top: 10px;
+}
+main .bottom-container .list-video {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+main .bottom-container .list-video .video {
+  width: 100%;
+  background: white;
+}
+main .bottom-container .list-video .video img {
+  width: 100%;
+  height: 140px;
+  border-radius: 3px;
+  object-fit: cover;
+}
+main .bottom-container .list-video .video .content {
+  height: auto;
+}
+main .bottom-container .list-video .video .content .top {
+  display: flex;
+  align-items: center;
+}
+main .bottom-container .list-video .video .content .top p {
+  color: var(--black2);
+  font-size: 16px;
+  font-weight: 600;
+}
+main .bottom-container .list-video .video .content .bottom p {
+  color: var(--black1);
+  font-size: 13px;
+}
+main .bottom-container .list-video .video .content .top img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.main-play {
+  position: absolute;
+  display: flex;
+  left: 200px;
+  width: calc(100% - 200px);
+  top: 60px;
+  padding: 10px;
+  background: #f7f5f5;
+  transition: 0.3s;
+}
+.main-play .container-play {
+  width: 70%;
+}
+.main-play .container-play .video-play video {
+  width: 100%;
+  border-radius: 4px;
+}
+.main-play .container-play .video-play .content-play .top .list-link a {
+  text-decoration: none;
+}
+.main-play .container-play .video-play .content-play .top p {
+  font-size: 23px;
+  font-weight: 600;
+  color: var(--black3);
+}
+.main-play .container-play .video-play .content-play .top .number-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--black1);
+}
+.main-play
+  .container-play
+  .video-play
+  .content-play
+  .top
+  .number-content
+  .number {
+  font-size: 15px;
+
+  color: var(--black2);
+}
+.main-play
+  .container-play
+  .video-play
+  .content-play
+  .top
+  .number-content
+  .list-icon {
+  display: flex;
+}
+.main-play
+  .container-play
+  .video-play
+  .content-play
+  .top
+  .number-content
+  .list-icon
+  li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0 7px;
+  color: var(--black3);
+}
+.main-play
+  .container-play
+  .video-play
+  .content-play
+  .top
+  .number-content
+  .list-icon
+  li
+  ion-icon {
+  margin-right: 3px;
+}
+.main-play .container-play .video-play .content-play .bottom .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-play .container-play .video-play .content-play .bottom .info .avatar {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.main-play .container-play .video-play .content-play .bottom .info .avatar img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.main-play .container-play .video-play .content-play .bottom .info .avatar p {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--black3);
+}
+.main-play .container-play .video-play .content-play .bottom .info button {
+  font-size: 16px;
+  padding: 8px 20px;
+  background: var(--red);
+  outline: none;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+.main-play .container-play .video-play .content-play .bottom .content p {
+  font-size: 15px;
+  color: var(--black2);
+}
+.main-play .container-play .video-play .content-play .bottom .content {
+  margin-left: 50px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--black1);
+  padding-bottom: 20px;
+}
+.main-play .container-play .video-play .content-play .bottom .list-comment {
+  padding-top: 20px;
+  margin-left: 50px;
+}
+.main-play .container-play .video-play .content-play .bottom .list-comment p {
+  font-weight: 600;
+  color: var(--black3);
+}
+.main-play
+  .container-play
+  .video-play
+  .content-play
+  .bottom
+  .list-comment
+  .comment {
+  margin: 13px 0;
+}
+
+.main-play
+  .container-play
+  .video-play
+  .content-play
+  .bottom
+  .list-comment
+  .comment
+  .write {
+  display: flex;
+  align-items: flex-start;
+}
+.main-play
+  .container-play
+  .video-play
+  .content-play
+  .bottom
+  .list-comment
+  .comment
+  .write
+  img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+.main-play
+  .container-play
+  .video-play
+  .content-play
+  .bottom
+  .list-comment
+  .comment
+  .write
+  span {
+  color: var(--black2);
+}
+.main-play
+  .container-play
+  .video-play
+  .content-play
+  .bottom
+  .list-comment
+  .comment
+  .write
+  .content-comment
+  .name {
+  color: var(--black3);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.main-play
+  .container-play
+  .video-play
+  .content-play
+  .bottom
+  .list-comment
+  .comment
+  .write
+  .content-comment
+  p {
+  color: var(--black2);
+}
+.main-play
+  .container-play
+  .video-play
+  .content-play
+  .bottom
+  .list-comment
+  .comment
+  .write
+  .content-comment
+  .icon {
+  color: var(--black2);
+  display: flex;
+  align-items: center;
+}
+.main-play
+  .container-play
+  .video-play
+  .content-play
+  .bottom
+  .list-comment
+  .comment
+  .write
+  .content-comment
+  .icon
+  .like {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.main-play
+  .container-play
+  .video-play
+  .content-play
+  .bottom
+  .list-comment
+  .comment
+  .write
+  .content-comment
+  .icon
+  .dis-like
+  ion-icon,
+.main-play
+  .container-play
+  .video-play
+  .content-play
+  .bottom
+  .list-comment
+  .comment
+  .write
+  .content-comment
+  .icon
+  .like
+  ion-icon {
+  margin-right: 5px;
+}
+.main-play
+  .container-play
+  .video-play
+  .content-play
+  .bottom
+  .list-comment
+  .comment
+  .write
+  .content-comment
+  .icon
+  .dis-like {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.main-play .sidetab {
+  width: calc(30% - 10px);
+  margin-left: 10px;
+}
+.main-play .sidetab .video {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+.main-play .sidetab .video img {
+  margin-right: 5px;
+  width: 50%;
+  height: 100px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.main-play .sidetab .video .content .top p {
+  font-weight: 400;
+}
+.main-play .sidetab .video .content .bottom p:nth-child(1) {
+  font-size: 15px;
+}
+.main-play .sidetab .video .content .bottom p {
+  font-size: 13px;
+  color: var(--black2);
+}
