@@ -587,6 +587,9 @@ main .bottom-container .list-video .video .content .top img {
   }
 }
 @media (max-width: 600px) {
+  body {
+    width: calc(100% - 50px);
+  }
   .main-play
     .container-play
     .video-play
@@ -624,6 +627,9 @@ main .bottom-container .list-video .video .content .top img {
     left: 50px;
     width: calc(100% - 50px);
   }
+  body header {
+    width: calc(100% - 50px);
+  }
   body.active .main-play {
     left: 600px;
     width: 0;
@@ -649,6 +655,9 @@ main .bottom-container .list-video .video .content .top img {
   }
 }
 @media (max-width: 650px) {
+  header {
+    width: calc(100% - 50px);
+  }
   .main-play
     .container-play
     .video-play
