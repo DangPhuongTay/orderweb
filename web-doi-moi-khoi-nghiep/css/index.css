@@ -30,6 +30,7 @@ header {
   justify-content: space-between;
   z-index: 1001;
   background: white;
+  box-sizing: border-box;
 }
 header .logo {
   display: flex;
@@ -85,6 +86,7 @@ header .setting img {
   height: 30px;
   object-fit: cover;
   border-radius: 50%;
+  border: 1px solid var(--red);
 }
 header .search {
   position: relative;
@@ -249,7 +251,7 @@ main .bottom-container .list-video .video .content {
 }
 main .bottom-container .list-video .video .content .top {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 main .bottom-container .list-video .video .content .top p {
   color: var(--black2);
@@ -286,6 +288,7 @@ main .bottom-container .list-video .video .content .top img {
 }
 .main-play .container-play .video-play .content-play .top .list-link a {
   text-decoration: none;
+  font-size: 13px;
 }
 .main-play .container-play .video-play .content-play .top p {
   font-size: 23px;
@@ -467,6 +470,7 @@ main .bottom-container .list-video .video .content .top img {
   .content-comment
   p {
   color: var(--black2);
+  font-size: 15px;
 }
 .main-play
   .container-play
@@ -481,6 +485,7 @@ main .bottom-container .list-video .video .content .top img {
   color: var(--black2);
   display: flex;
   align-items: center;
+  font-size: 15px;
 }
 .main-play
   .container-play
@@ -564,4 +569,149 @@ main .bottom-container .list-video .video .content .top img {
 .main-play .sidetab .video .content .bottom p {
   font-size: 13px;
   color: var(--black2);
+}
+@media (max-width: 1000px) {
+  .main-play {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-play .container-play {
+    display: block;
+    width: 100%;
+    margin-right: 0px;
+  }
+  .main-play .sidetab {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .main-play
+    .container-play
+    .video-play
+    .content-play
+    .bottom
+    .list-comment
+    .comment
+    .write
+    .content-comment
+    p {
+    font-size: 10px;
+  }
+  main {
+    overflow-x: hidden;
+  }
+  nav {
+    width: 50px;
+  }
+  nav .list-like li:nth-child(1) {
+    visibility: hidden;
+  }
+  nav.active .list-like li:nth-child(1) {
+    visibility: visible;
+  }
+  .main-play {
+    left: 50px;
+    width: 100%;
+    padding-right: 0;
+  }
+  main {
+    left: 50px;
+    width: calc(100% - 50px);
+  }
+  .main-play {
+    left: 50px;
+    width: calc(100% - 50px);
+  }
+  body.active .main-play {
+    left: 600px;
+    width: 0;
+  }
+  main.active {
+    left: 600px;
+    width: 0;
+  }
+  nav.active {
+    width: 100%;
+  }
+  nav.on {
+    width: 100%;
+  }
+  main .top-container .contaier {
+    width: 100%;
+  }
+  main .top-container .contaier span {
+    font-size: 10px;
+  }
+  .main-play .container-play {
+    width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  .main-play
+    .container-play
+    .video-play
+    .content-play
+    .top
+    .number-content
+    .number {
+    font-size: 10px;
+  }
+  body header .search .input input {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    width: 0;
+  }
+  header .setting ion-icon {
+    visibility: hidden;
+    font-size: 1px;
+  }
+  header .logo a span {
+    font-size: 15px;
+  }
+  .main-play .container-play .video-play .content-play .bottom .info button {
+    font-size: 10px;
+    padding: 5px 10px;
+    background: var(--red);
+    outline: none;
+    color: white;
+    border: none;
+    border-radius: 3px;
+  }
+  .main-play .container-play .video-play .content-play .top p {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--black3);
+  }
+  .main-play
+    .container-play
+    .video-play
+    .content-play
+    .top
+    .number-content
+    .list-icon
+    li
+    ion-icon {
+    font-size: 12px;
+    margin-right: 1px;
+  }
+  .main-play
+    .container-play
+    .video-play
+    .content-play
+    .top
+    .number-content
+    .list-icon
+    li {
+    font-size: 12px;
+    margin-right: 1px;
+  }
+}
+@media (max-width: 950px) {
+  main .top-container .contaier {
+    width: 100%;
+  }
+  main .top-container .contaier span {
+    font-size: 20px;
+  }
 }
