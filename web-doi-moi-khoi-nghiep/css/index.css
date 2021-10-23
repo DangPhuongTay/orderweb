@@ -20,7 +20,7 @@ body {
 }
 
 header {
-  padding: 0px 20px;
+  padding: 0px 16px;
   position: fixed;
   height: 55px;
   display: flex;
@@ -49,8 +49,9 @@ header .logo .btn {
   background: white;
   outline: none;
   border: none;
-  font-size: 20px;
-  color: var(--black1);
+
+  font-size: 24px;
+  color: #747474;
   display: flex;
   align-items: center;
 }
