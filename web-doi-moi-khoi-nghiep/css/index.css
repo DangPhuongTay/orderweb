@@ -587,9 +587,6 @@ main .bottom-container .list-video .video .content .top img {
   }
 }
 @media (max-width: 600px) {
-  body {
-    width: calc(100% - 50px);
-  }
   .main-play
     .container-play
     .video-play
