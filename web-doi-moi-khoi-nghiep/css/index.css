@@ -20,8 +20,8 @@ body {
 }
 
 header {
-  padding: 0px 16px;
   position: fixed;
+  padding: 0px 16px;
   height: 55px;
   display: flex;
   width: 100%;
@@ -618,11 +618,12 @@ main .bottom-container .list-video .video .content .top img {
   main {
     left: 50px;
     width: calc(100% - 50px);
+    overflow-x: hidden;
   }
   .main-play {
     left: 50px;
-    width: calc(100% + 50px);
-    padding-right: 10px;
+    width: calc(100% - 50px);
+    overflow-x: hidden;
   }
 
   body.active .main-play {
