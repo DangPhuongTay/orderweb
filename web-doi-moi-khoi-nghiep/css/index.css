@@ -625,7 +625,7 @@ main .bottom-container .list-video .video .content .top img {
   }
   .main-play {
     left: 50px;
-    width: calc(100% - 50px);
+    width: calc(100% - 10px);
   }
   body header {
     width: calc(100% - 50px);
