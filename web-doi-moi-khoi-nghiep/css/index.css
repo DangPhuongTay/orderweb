@@ -217,6 +217,7 @@ main .top-container .contaier span {
   font-size: 25px;
 }
 main .top-container .contaier p {
+  width: 90%;
   font-size: 15px;
   margin-bottom: 20px;
 }
