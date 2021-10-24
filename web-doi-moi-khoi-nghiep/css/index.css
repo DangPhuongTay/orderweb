@@ -626,10 +626,16 @@ main .bottom-container .list-video .video .content .top img {
     width: calc(100% - 60px);
     overflow-x: hidden;
   }
+  body.active {
+    overflow-x: hidden;
+  }
 
   body.active .main-play {
     left: 600px;
     width: 0;
+  }
+  body.active header {
+    width: 100%;
   }
   main.active {
     left: 600px;
