@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Nunito", sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(40deg, rgb(112, 165, 235), #6f228d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.car {
+  position: relative;
+  display: flex;
+
+  width: 250px;
+  height: 350px;
+  background: linear-gradient(40deg, rgb(112, 165, 235), #6f228d);
+  border-radius: 10px;
+  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.15),
+    inset -5px -5px 15px rgba(225, 225, 225, 0.15),
+    5px 5px 15px rgba(0, 0, 0, 0.15), -5px -5px 15px rgba(225, 225, 225, 0.15);
+}
+.car::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #fff;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.car:hover::before {
+  transform: translate(20px, -20px);
+}
+.car:hover .car_container {
+  transform: translate(20px, -20px);
+}
+.car_container {
+  width: 100%;
+  transition: 0.5s;
+  z-index: 1000;
+  padding: 10px;
+  padding-top: 15px;
+}
+.car_container-bottom ion-icon {
+  font-size: 20px;
+  color: rgb(232, 120, 0);
+}
+.car_container-top-infor {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.car_container-top-infor .left {
+  display: flex;
+}
+.car_container-top-infor .left .info {
+  margin-left: 10px;
+  color: #2f3542;
+}
+.car_container-top-infor .left .info p:nth-child(1) {
+  font-size: 11px;
+  font-weight: 600;
+}
+.car_container-top-infor .left .info p:nth-child(2) {
+  font-size: 10px;
+}
+.car_container-top-infor .right {
+  display: flex;
+  align-items: center;
+}
+.car_container-top-infor .left img {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 2px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #a3a3a3;
+  margin-bottom: 1px;
+  margin-top: 5px;
+}
+.car_container-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.car_container-bottom .left ion-icon:nth-child(1) {
+  color: #ff4757;
+  font-size: 18px;
+}
+.car_container-bottom ion-icon {
+  font-size: 17px;
+  color: #2f3542;
+}
+p {
+  color: #2f3542;
+  font-weight: 600;
+  font-size: 11px;
+}
+input {
+  margin-top: 5px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #bfbfbf;
+  border-radius: 10px;
+  padding: 3px;
+}
