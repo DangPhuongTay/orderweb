@@ -660,8 +660,6 @@ header {
   width: 100%;
   background: rgb(220, 218, 218);
   padding: 6px;
-  overflow-y: scroll;
-  overflow: hidden;
 }
 .notification .heading_notification {
   background: white;
@@ -766,4 +764,9 @@ header {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+@media (max-width: 326px) {
+  .home {
+    padding-right: 6px;
+  }
 }
