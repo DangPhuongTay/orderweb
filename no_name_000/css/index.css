@@ -151,6 +151,7 @@ header {
 .item_video .item_heading .info span:nth-child(2) ion-icon {
   font-size: 8px;
   margin-left: 2px;
+
   color: #2d98da;
   z-index: 1;
 }
