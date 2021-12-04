@@ -25,25 +25,25 @@ body {
   flex-direction: column;
 }
 .content-order-top {
-  height: 118px;
+  height: 65px;
   width: 500px;
   background: var(--red);
 }
 .content-order-bottom {
   display: flex;
   padding: 20px;
-  height: 302px;
+  height: 385px;
   width: 500px;
   background: rgb(246, 246, 246);
-  padding-top: 50px;
+  padding-top: 0px;
 }
 .content-order-img {
   position: absolute;
   overflow: hidden;
-  width: 95px;
-  height: 95px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  top: 112px;
+  top: 61px;
   left: 50%;
   background: white;
   transform: translate(-50%, -50%);
@@ -205,4 +205,53 @@ body.on .out-put-content {
 
 body.ok .thanh-cong {
   display: block;
+}
+.text-box {
+  overflow: hidden;
+  padding-top: 50px;
+  align-items: flex-start;
+  justify-content: center;
+  display: flex;
+  background: rgb(246, 246, 246);
+}
+.text-heading {
+  padding: 5px 0;
+  margin-right: 8px;
+  color: rgb(82, 82, 82);
+}
+.text-box ul {
+  height: 30px;
+  overflow: hidden;
+}
+.text-box ul li span {
+  position: relative;
+  color: red;
+}
+.text-box ul li {
+  padding: 5px 0;
+  position: relative;
+  top: 0;
+  animation: text-line 6s steps(3) infinite;
+}
+.text-box ul li span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-left: 1px solid red;
+  background: rgb(246, 246, 246);
+  animation: text 2s steps(10) infinite;
+}
+@keyframes text {
+  100% {
+    left: 100%;
+    margin-left: 15px;
+  }
+}
+@keyframes text-line {
+  100% {
+    top: -96px;
+  }
 }
